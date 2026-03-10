@@ -29,11 +29,18 @@
 }
 
 .landingMainContainer {
+ .landingMainContainer {
   display: flex;
   justify-content: space-between;
   padding-inline: 3rem;
   height: 80vh;
   align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.45);
+  border-radius: 15px;
+  margin: 30px;
+  color: white;
+}
 }
 
 .landingMainContainer>div:nth-child(1) {
@@ -93,4 +100,10 @@
   width: 30vw;
   height: auto;
   border-radius: 20px;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("https://images.unsplash.com/photo-1604079628040-94301bb21b91") no-repeat center center fixed;
+  background-size: cover;
 }
