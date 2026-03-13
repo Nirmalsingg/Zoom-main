@@ -51,7 +51,7 @@
 }
 
 .landingMainContainer>div:nth-child(1) div[role='button'] {
-  background: #D97500;
+  background: rgb(217, 0, 0);
   width: fit-content;
   padding: 1rem;
   border-radius: 20px;
