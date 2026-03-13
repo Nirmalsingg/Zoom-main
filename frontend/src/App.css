@@ -1,7 +1,7 @@
 .landingPageContainer {
   width: 100vw;
   height: 100vh;
-  background: url("/public/background.png");
+  background: url("/public/background5.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -28,14 +28,24 @@
 
 }
 
-.landingMainContainer {
-  display: flex;
-  justify-content: space-between;
-  padding-inline: 3rem;
-  height: 80vh;
-  align-items: center;
-}
+.landingMainContainer{
+  display:flex;
+  justify-content:space-between;
+  padding-inline:3rem;
+  height:80vh;
+  align-items:center;
 
+  backdrop-filter: blur(18px);
+  background: rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+
+  border-radius:20px;
+  margin:40px;
+  padding:40px;
+  color:white;
+
+  box-shadow:0 0 40px rgba(255,0,150,0.25);
+}
 .landingMainContainer>div:nth-child(1) {
   font-size: 2.2rem;
 }
@@ -93,4 +103,50 @@
   width: 30vw;
   height: auto;
   border-radius: 20px;
+}
+body{
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#1a0033,#2b0055,#5b00a5,#ff2f92);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color:white;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+.navHeader h2{
+  font-size:28px;
+  font-weight:bold;
+  background: linear-gradient(90deg,#ff2f92,#9c4dff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+button{
+  background: linear-gradient(90deg,#ff2f92,#9c4dff);
+  border:none;
+  padding:12px 28px;
+  border-radius:30px;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px #ff2f92;
+}
+.landingMainContainer img{
+  height:70vh;
+  animation: floatPhone 4s ease-in-out infinite;
+}
+
+@keyframes floatPhone{
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(-20px);}
+  100%{transform: translateY(0px);}
 }
