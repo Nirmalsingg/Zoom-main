@@ -37,14 +37,23 @@ function HomeComponent() {
                     }>
                         <RestoreIcon />
                     </IconButton>
-                    <p>History</p>
+                    <p style={{color:"white", fontWeight:"500"}}>History</p>
 
-                    <Button onClick={() => {
-                        localStorage.removeItem("token")
-                        navigate("/auth")
-                    }}>
-                        Logout
-                    </Button>
+                   <Button
+  sx={{
+    color: "white",
+    fontWeight: 600,
+    background: "linear-gradient(90deg,#ff4fd8,#9b5cff)",
+    padding: "6px 18px",
+    borderRadius: "8px"
+  }}
+  onClick={() => {
+    localStorage.removeItem("token")
+    navigate("/auth")
+  }}
+>
+  Logout
+</Button>
                 </div>
 
 
@@ -54,18 +63,32 @@ function HomeComponent() {
             <div className="meetContainer">
                 <div className="leftPanel">
                     <div>
-                        <h2>Providing Best Quality Video Call in India</h2>
+                        <h2>Connect Instantly With Anyone, Anywhere</h2>
 
                         <div style={{ display: 'flex', gap: "10px" }}>
 
-                            <TextField onChange={e => setMeetingCode(e.target.value)} id="outlined-basic" label="Meeting Code" variant="outlined" />
+                            <TextField
+  onChange={e => setMeetingCode(e.target.value)}
+  id="outlined-basic"
+  label="Meeting Code"
+  variant="outlined"
+  sx={{
+    input: { color: "white" },
+    label: { color: "white" },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": { borderColor: "white" },
+      "&:hover fieldset": { borderColor: "#ff66cc" },
+      "&.Mui-focused fieldset": { borderColor: "#ff66cc" }
+    }
+  }}
+/>
                             <Button onClick={handleJoinVideoCall} variant='contained'>Join</Button>
 
                         </div>
                     </div>
                 </div>
                 <div className='rightPanel'>
-                    <img srcSet='/logo3.png' alt="" />
+                    <img srcSet='/logod1.jpg' alt="" />
                 </div>
             </div>
         </>
